@@ -136,45 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     },
-    // slider linh vuc hoat dong
-    sliderFiledActivity: function(){
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1.2,
-        spaceBetween: 5,
-        centeredSlides: false,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          type: "progressbar",
-        },
-        breakpoints: {
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 5,
-          },
-        },
-      });
-    },
-    // slider cty thanh vien
-    sliderCompany: function(){
-      var swiper2 = new Swiper(".mySwiperCompa", {
-        slidesPerView: 2,
-        spaceBetween: 60,
-        slidesPerGroup: 1,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        hideOnClick:true,
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 98,
-            slidesPerGroup: 1,
-          },
-        },
-      });
-    },
     // slider điểm đến mùa hè
     sliderSummer: function(){
       var swiper3 = new Swiper(".mySwiperSummer", {
@@ -183,14 +144,58 @@ document.addEventListener("DOMContentLoaded", function () {
         centeredSlides: true,
         loop:true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next1",
+          prevEl: ".swiper-button-prev1",
         },
         hideOnClick:true,
         breakpoints: {
           1024: {
             slidesPerView: 4,
             spaceBetween: 16,
+            slidesPerGroup: 1,
+          },
+        },
+      });
+    },
+    // slider thư viện ảnh & video
+    sliderPicture: function(){
+      var swiper4 = new Swiper(".mySwiperPiture", {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        navigation: {
+          nextEl: ".swiper-button-next2",
+          prevEl: ".swiper-button-prev2",
+        },
+        pagination: {
+          el: ".swiper-pagination2",
+        },
+        hideOnClick:true,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 8,
+            slidesPerGroup: 1,
+          },
+        },
+      });
+    },
+    // slider nhà đầu tư
+    sliderInvestos: function(){
+      var swiper5 = new Swiper(".mySwiperInvestor", {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        navigation: {
+          nextEl: ".swiper-button-next3",
+          prevEl: ".swiper-button-prev3",
+        },
+        pagination: {
+          el: ".swiper-pagination3",
+        },
+        hideOnClick:true,
+        breakpoints: {
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 0,
             slidesPerGroup: 1,
           },
         },
@@ -210,12 +215,12 @@ document.addEventListener("DOMContentLoaded", function () {
       this.handleEvent();
       // window scroll
       this.windowScroll();
-      // slider linh vuc hoat dong
-      this.sliderFiledActivity();
-      // slider cty thanh vien
-      this.sliderCompany();
       // slider điểm đến mùa hè
       this.sliderSummer();
+      // slider thư viện ảnh & video
+      this.sliderPicture();
+      // slider nhà đầu tư
+      this.sliderInvestos();
     },
   };
 
