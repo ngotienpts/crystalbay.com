@@ -84,6 +84,9 @@ img {
 .font-hel500 {
   font-family: "Helvetical Medium", sans-serif;
 }
+.font-helve {
+  font-family: "Helvetical Neue", sans-serif;
+}
 /*===========================================================================*/
 .w-930 {
   max-width: 58.125rem;
@@ -207,6 +210,10 @@ button:hover {
 
 button:hover::before {
   transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+  -webkit-transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+  -moz-transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+  -ms-transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+  -o-transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
 }
 
 /*=================================================================*/

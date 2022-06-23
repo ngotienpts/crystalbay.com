@@ -2,37 +2,77 @@
     width: 100%;
     background: #0868AC;
 }
-.cate-top {
-    position: relative;
+.summer-destination-cate {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #d2d2d2;
 }
-.cate-top-catefory {
+.destination-secondary {
+    padding: 1.25rem 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 2.5rem;
+}
+.foregin-destination-primary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.25rem;
+    padding-bottom: 1.875rem;
+}
+.pagination-cate {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.875rem 0;
+}
+.next-page {
+    width: 35%;
+    flex-shrink: 0;
+    height: 36px;
+    background: #0870d1;
+    border-radius: 10px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-.cate-top__item .cate-top__link {
-    color: #C0C0C0;
+.next-page i {
+    padding-left: 0.325rem;
+    font-size: 1.25rem;
 }
-.cate-top__item.active .cate-top__link {
-    color: #fff;
+.pagination-right {
+    flex: 1;
+    text-align: right;
 }
-.cate-top__item + .cate-top__item {
-    margin-left: 1rem;
+.pagination li {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #F4F6F8;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.25rem;
 }
-.cate-top__item{
-position: relative;
+.pagination li + li {
+    margin-left: 0.5rem;
 }
-.cate-top__item:not(.active)::before{
-    position: absolute;
-    content: '\002F';
-    color: #fff;
-    top: 50%;
-    right: -0.65rem;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+.pagination .next {
+    color: #0870D1;
 }
-.cate-top__text {
-    padding: 3.125rem 0 4.5rem 0;
+.pagination .prev {
+    color: #828282;
+}
+.pagination .number {
+
+}
+.total-pages {
+    display: inline-block;
+    margin-top: 15px;
 }
