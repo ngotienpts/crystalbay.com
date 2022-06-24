@@ -154,9 +154,13 @@
 .other-news-block {
     background: #f4f6f8;
 }
-.other-news {
-    max-width: 50rem;
+.other-news-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px ;
+    grid-gap: 2.5rem;
     padding: 3.75rem 0 ;
+}
+.other-news {
 }
 .other-news__title {
     margin-bottom: 1.875rem;
