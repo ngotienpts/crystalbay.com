@@ -1,0 +1,20 @@
+.detail-intro-wrapper {
+    background-color: #F5F5F5;
+}
+.detail-intro-container {
+    padding: 1.875rem 0 0;
+}
+.detail-intro-block {
+    padding-bottom: 100px;
+}
+.breadcrumb-detail-intro {
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 0;
+}
+.breadcrumb-detail-intro li + li {
+    margin-left: 2.5rem;
+}
