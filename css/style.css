@@ -2537,6 +2537,10 @@ body.hide {
   margin-left: 2.5rem;
 }
 
+.height-fixed--detail-intro {
+  background-color: #F5F5F5;
+}
+
 #back-top {
   position: fixed;
   right: 1rem;

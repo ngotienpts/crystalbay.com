@@ -77,6 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // destination list
       if(destination){
         destination.style.marginTop = '-' + ((destination.clientHeight) - 50) + 'px';
+        if(widthDoc.clientWidth < 576){
+          destination.style.marginTop = '-' + 200 + 'px';
+        }
       }
 
       // tabs
@@ -93,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
             
             if(destination){
               destination.style.marginTop = '-' + ((destination.clientHeight) - 50) + 'px';
+              if(widthDoc.clientWidth < 576){
+                destination.style.marginTop = '-' + 200 + 'px';
+              }
             }
             
           }
@@ -149,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 2,
         slidesPerGroup: 1,
         centeredSlides: true,
+        spaceBetween: 16,
         loop:true,
         navigation: {
           nextEl: ".swiper-button-next1",
@@ -161,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 16,
             slidesPerGroup: 1,
           },
+          
         },
       });
     },
@@ -169,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var swiper4 = new Swiper(".mySwiperPiture", {
         slidesPerView: 2,
         slidesPerGroup: 1,
+        spaceBetween: 8,
         navigation: {
           nextEl: ".swiper-button-next2",
           prevEl: ".swiper-button-prev2",
@@ -189,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // slider nhà đầu tư
     sliderInvestos: function(){
       var swiper5 = new Swiper(".mySwiperInvestor", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         slidesPerGroup: 1,
         navigation: {
           nextEl: ".swiper-button-next3",
