@@ -1,6 +1,3 @@
-body.hide {
-  overflow: hidden;
-}
 .main-top__primary {
   position: relative;
 }
@@ -285,80 +282,6 @@ body.hide {
 .swiper-img:last-child {
   margin-bottom: 5rem;
 }
-// .company-container .swiper-button-next,
-// .company-container .swiper-rtl .swiper-button-prev {
-//   right: 0;
-//   left: auto;
-//   top: auto;
-//   bottom: 0;
-// }
-// .company-container .swiper-button-prev,
-// .company-container .swiper-rtl .swiper-button-next {
-//   left: auto;
-//   right: 3rem;
-//   bottom: 0;
-//   top: auto;
-// }
-// .company-container .swiper-button-next,
-// .company-container .swiper-rtl .swiper-button-prev,
-// .company-container .swiper-button-prev,
-// .company-container .swiper-rtl .swiper-button-next {
-//   width: 2.5rem;
-//   height: 2.5rem;
-//   background: #fff;
-//   border: 1px solid #0870d1;
-//   border-radius: 0.25rem;
-// }
-// .company-container .swiper-button-prev:after,
-// .company-container .swiper-rtl .swiper-button-next:after {
-//   content: "\276E";
-//   font-size: 1rem;
-//   color: #fff;
-//   transition: 0.2s;
-//   -webkit-transition: 0.2s;
-//   -moz-transition: 0.2s;
-//   -ms-transition: 0.2s;
-//   -o-transition: 0.2s;
-// }
-// .company-container .swiper-button-next:after,
-// .company-container .swiper-rtl .swiper-button-prev:after {
-//   content: "\276F";
-//   font-size: 1rem;
-//   color: #fff;
-//   transition: 0.2s;
-//   -webkit-transition: 0.2s;
-//   -moz-transition: 0.2s;
-//   -ms-transition: 0.2s;
-//   -o-transition: 0.2s;
-// }
-// .company-container .swiper-button-next.swiper-button-disabled,
-// .company-container .swiper-button-prev.swiper-button-disabled {
-//   opacity: 1;
-//   background: #fff;
-//   transition: 0.2s;
-//   -webkit-transition: 0.2s;
-//   -moz-transition: 0.2s;
-//   -ms-transition: 0.2s;
-//   -o-transition: 0.2s;
-// }
-// .company-container .swiper-button-next,
-// .company-container .swiper-button-prev {
-//   background: #0870d1;
-//   transition: 0.2s;
-//   -webkit-transition: 0.2s;
-//   -moz-transition: 0.2s;
-//   -ms-transition: 0.2s;
-//   -o-transition: 0.2s;
-// }
-// .company-container .swiper-button-next.swiper-button-disabled:after,
-// .company-container .swiper-button-prev.swiper-button-disabled:after {
-//   color: #0870d1;
-//   transition: 0.2s;
-//   -webkit-transition: 0.2s;
-//   -moz-transition: 0.2s;
-//   -ms-transition: 0.2s;
-//   -o-transition: 0.2s;
-// }
 .main-top__bg--mb,
 .footer-mb,
 .navbar-mb {
@@ -566,14 +489,7 @@ body.hide {
   color: #ccc;
   user-select: none;
 }
-// .alphabet-item + .alphabet-item {
-//   margin-left: 5.5px;
-// }
-.search-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
-}
+
 .search-list-item {
   position: relative;
   padding-left: 1rem;
@@ -842,14 +758,37 @@ body.hide {
 
 .investors-wrapper {
   background-color: #F6F7FB;
+  position: relative;
+  // height: 100%;
 }
 .investors {
   position: relative;
   padding-bottom: 2rem;
 }
-.investors-item {
-  display: grid;
-  grid-template-columns: repeat(7,1fr);
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-container .swiper-slide {
+  text-align: center;
+  height: auto;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 .investors .swiper-button-next3,
 .investors .swiper-rtl .swiper-button-prev3 {
@@ -921,17 +860,14 @@ body.hide {
   background: #c0c0c0;
 }
 .swiper-img-3 {
-  padding: 1.25rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
-.swiper-img-3 {
+.mySwiperInvestor .swiper-slide {
   border-right: 1px solid #ededed;
+  border-top: 1px solid #ededed;
 }
-.swiper-img-3:nth-child(7),
-.swiper-img-3:last-child{
-  border-right: none;
-}
-.swiper-img-3:nth-child(-n + 7) {
-  border-bottom: 1px solid #ededed;
+.mySwiperInvestor .swiper-slide:nth-child(-n + 8){
+  border-top: none;
 }

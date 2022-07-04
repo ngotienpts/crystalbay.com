@@ -30,6 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // destination list
   var destination = document.querySelector('.destination-list');
 
+
+  // đếm số lượng slide item
+  var investorCounts = document.querySelectorAll('.investor-count');
+  var destinationHomeCounts = document.querySelectorAll('.destination-home-count');
+  
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -77,6 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // destination list
       if(destination){
         destination.style.marginTop = '-' + ((destination.clientHeight) - 50) + 'px';
+        if(widthDoc.clientWidth < 1200){
+          destination.style.marginTop = '-' + 100 + 'px';
+        }
+        if(widthDoc.clientWidth < 992){
+          destination.style.marginTop = '-' + 150 + 'px';
+        }
         if(widthDoc.clientWidth < 576){
           destination.style.marginTop = '-' + 200 + 'px';
         }
@@ -96,11 +108,18 @@ document.addEventListener("DOMContentLoaded", function () {
             
             if(destination){
               destination.style.marginTop = '-' + ((destination.clientHeight) - 50) + 'px';
+              if(widthDoc.clientWidth < 1200){
+                destination.style.marginTop = '-' + 100 + 'px';
+              }
+              if(widthDoc.clientWidth < 992){
+                destination.style.marginTop = '-' + 150 + 'px';
+              } 
               if(widthDoc.clientWidth < 576){
                 destination.style.marginTop = '-' + 200 + 'px';
               }
             }
             
+            // this.sliderDestinationHome();
           }
         })
       }
@@ -184,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         pagination: {
           el: ".swiper-pagination2",
+          clickable: true,
         },
         hideOnClick:true,
         breakpoints: {
@@ -197,22 +217,103 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     // slider nhà đầu tư
     sliderInvestos: function(){
-      var swiper5 = new Swiper(".mySwiperInvestor", {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        navigation: {
-          nextEl: ".swiper-button-next3",
-          prevEl: ".swiper-button-prev3",
+      investorCounts.forEach(function(investorCount){
+        var swiper5 = new Swiper(".mySwiperInvestor", {
+          slidesPerView: 2,
+          grid: {
+            rows: 2,
+            fill: 'rows',
+          },
+          navigation: {
+            nextEl: ".swiper-button-next3",
+            prevEl: ".swiper-button-prev3",
+          },
+          pagination: {
+            el: ".swiper-pagination3",
+            clickable: true,
+          },
+          hideOnClick:true,
+          breakpoints: {
+            768: {
+              slidesPerView: 4,
+              grid: {
+                rows: (Math.floor(investorCount.children.length /4)),
+                fill: 'rows',
+              },
+            },
+            1024: {
+              slidesPerView: 7,
+              grid: {
+                rows: (Math.floor(investorCount.children.length /7)),
+                fill: 'rows',
+              },
+            },
+          },
+        });
+      })
+    },
+    // slider danh sách điểm đến home
+    sliderDestinationHome: function(){
+      destinationHomeCounts.forEach(function(destinationHomeCount){
+        var swiper6 = new Swiper(".mySwiperDestinationHome", {
+          slidesPerView: 2,
+          grid: {
+            rows: 4,
+            fill: 'rows',
+          },
+          spaceBetween: 15,
+          pagination: {
+            el: ".swiper-pagination4",
+            clickable: true,
+          },
+          hideOnClick:true,
+          breakpoints: {
+            768: {
+              slidesPerView: 4,
+              grid: {
+                rows: (Math.floor(destinationHomeCount.children.length /4)),
+                fill: 'rows',
+              },
+            },
+            1024: {
+              slidesPerView: 5,
+              grid: {
+                rows: (Math.floor(destinationHomeCount.children.length /5)),
+                fill: 'rows',
+              },
+            },
+          },
+        });
+      })
+    },
+    // slider danh sách điểm đến cate
+    sliderDestinationCate: function(){
+      var swiper7 = new Swiper(".mySwiperDestinationCate", {
+        slidesPerView: 2,
+        grid: {
+          rows: 4,
+          fill: 'rows',
         },
+        spaceBetween: 15,
         pagination: {
-          el: ".swiper-pagination3",
+          el: ".swiper-pagination5",
+          clickable: true,
         },
         hideOnClick:true,
         breakpoints: {
+          768: {
+            slidesPerView: 2,
+            grid: {
+              rows: 4,
+              fill: 'rows',
+            },
+          },
           1024: {
             slidesPerView: 1,
-            spaceBetween: 0,
-            slidesPerGroup: 1,
+            grid: {
+              rows: 4,
+              fill: 'rows',
+            },
           },
         },
       });
@@ -237,6 +338,10 @@ document.addEventListener("DOMContentLoaded", function () {
       this.sliderPicture();
       // slider nhà đầu tư
       this.sliderInvestos();
+      // slider danh sách điểm đến home
+      this.sliderDestinationHome();
+      // slider danh sách điểm đến cate
+      this.sliderDestinationCate();
     },
   };
 
