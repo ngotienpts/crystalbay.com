@@ -632,9 +632,10 @@
 
   /*===================================================================cate===================*/
   .destination-secondary {
-    grid-template-columns: 1fr;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .destination-secondary-left {
@@ -659,6 +660,7 @@
 
   .destination-list-cate {
     padding: 1.875rem 0.9375rem;
+    width: 100%;
   }
 
   .destination-list-cate .main-top__title {

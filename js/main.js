@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // đếm số lượng slide item
   var investorCounts = document.querySelectorAll('.investor-count');
   var destinationHomeCounts = document.querySelectorAll('.destination-home-count');
+  var destinationCateCounts = document.querySelectorAll('.destination-cate-count');
   
 
   const app = {
@@ -288,35 +289,29 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     // slider danh sách điểm đến cate
     sliderDestinationCate: function(){
-      var swiper7 = new Swiper(".mySwiperDestinationCate", {
-        slidesPerView: 2,
-        grid: {
-          rows: 4,
-          fill: 'rows',
-        },
-        spaceBetween: 15,
-        pagination: {
-          el: ".swiper-pagination5",
-          clickable: true,
-        },
-        hideOnClick:true,
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            grid: {
-              rows: 4,
-              fill: 'rows',
+      destinationCateCounts.forEach(function(destinationCateCount){
+        var swiper7 = new Swiper(".mySwiperDestinationCate", {
+          slidesPerView: 2,
+          grid: {
+            rows: 4,
+            fill: 'rows',
+          },
+          spaceBetween: 15,
+          pagination: {
+            el: ".swiper-pagination5",
+            clickable: true,
+          },
+          hideOnClick:true,
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 1,
             },
           },
-          1024: {
-            slidesPerView: 1,
-            grid: {
-              rows: 4,
-              fill: 'rows',
-            },
-          },
-        },
-      });
+        });
+      })
     },
     // window scroll
     windowScroll: function () {
