@@ -219,6 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // slider nhà đầu tư
     sliderInvestos: function(){
       investorCounts.forEach(function(investorCount){
+        var count_sl1 = Math.floor(investorCount.children.length /4);
         var swiper5 = new Swiper(".mySwiperInvestor", {
           slidesPerView: 2,
           grid: {
@@ -238,14 +239,14 @@ document.addEventListener("DOMContentLoaded", function () {
             768: {
               slidesPerView: 4,
               grid: {
-                rows: (Math.floor(investorCount.children.length /4)),
+                rows: (Math.floor(investorCount.children.length /count_sl1)),
                 fill: 'rows',
               },
             },
             1024: {
               slidesPerView: 7,
               grid: {
-                rows: (Math.floor(investorCount.children.length /7)),
+                rows: (Math.floor(investorCount.children.length /count_sl1)),
                 fill: 'rows',
               },
             },
@@ -256,6 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // slider danh sách điểm đến home
     sliderDestinationHome: function(){
       destinationHomeCounts.forEach(function(destinationHomeCount){
+        var count_sl = Math.floor(destinationHomeCount.children.length /4);
         var swiper6 = new Swiper(".mySwiperDestinationHome", {
           slidesPerView: 2,
           grid: {
@@ -272,14 +274,14 @@ document.addEventListener("DOMContentLoaded", function () {
             768: {
               slidesPerView: 4,
               grid: {
-                rows: (Math.floor(destinationHomeCount.children.length /4)),
+                rows: (Math.floor(destinationHomeCount.children.length /count_sl)),
                 fill: 'rows',
               },
             },
             1024: {
               slidesPerView: 5,
               grid: {
-                rows: (Math.floor(destinationHomeCount.children.length /5)),
+                rows: (Math.floor(destinationHomeCount.children.length /count_sl)),
                 fill: 'rows',
               },
             },
